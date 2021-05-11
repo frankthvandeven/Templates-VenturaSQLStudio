@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProgrammingPattern.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgrammingPattern"
+        mc:Ignorable="d"
+        Title="Ventura SQL Template - SqLite with Van Arsdel Database" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        d:DataContext="{d:DesignInstance local:MainWindow}">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="0,50,0,0"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="50" Width="200">
+            <Button Click="ButtonOrders_Click">Orders</Button>
+            <Button Click="ButtonCountryCodes_Click">Country Codes</Button>
+        </StackPanel>
+    </Grid>
+</Window>

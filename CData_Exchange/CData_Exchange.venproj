@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not edit this document manually, or at least make a backup before doing so.-->
+<project writerversion="3.1.70.0">
+  <inputdatabase providerinvariantname="System.Data.CData.Exchange" connectstring="auth scheme=BASIC;password=YOURPASSWORDHERE;platform=Exchange_Online;server=https://outlook.office365.com/EWS/Exchange.asmx;user=YOUREMAILADDRESSHERE@email.com" />
+  <providersettings includeservername="no" includecatalogname="no" includeschemaname="yes" columnserver="" columncatalog="" columnschema="" columntable="" columntype="" />
+  <outputproject1 enabled="yes" targetplatform="NETStandard" generatedirectadoconnectioncode="yes">.\CData_Exchange_WPF\CData_Exchange_WPF.csproj</outputproject1>
+  <outputproject2 enabled="no" targetplatform="NETStandard" generatedirectadoconnectioncode="yes" />
+  <outputproject3 enabled="no" targetplatform="NETStandard" generatedirectadoconnectioncode="yes" />
+  <outputproject4 enabled="no" targetplatform="NETStandard" generatedirectadoconnectioncode="yes" />
+  <outputproject5 enabled="no" targetplatform="NETStandard" generatedirectadoconnectioncode="yes" />
+  <outputproject6 enabled="no" targetplatform="NETStandard" generatedirectadoconnectioncode="yes" />
+  <autocreate enabled="yes" folder="VenturaAutoCreate" getall="yes" incremental="no" />
+  <folderstructure>
+    <folder selected="no" expanded="yes" />
+    <folder selected="no" expanded="yes">VenturaRecordsets</folder>
+    <folder selected="no" expanded="yes">VenturaAutoCreate</folder>
+  </folderstructure>
+  <projectitems>
+    <recordsetdefinition classname="ContactsRecordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaRecordsets</outputfolder>
+      <classsummary />
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>select DisplayName, MobilePhone, Emailaddress1, ItemID from Exchange.Contacts</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1Recordset" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Contacts" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Calendar_OptionalAttendees_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [EmailAddress],[ItemId],[Name]
+FROM [Exchange].[Calendar_OptionalAttendees]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Calendar_OptionalAttendees" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Calendar_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[DateTimeReceived],[Size],
+[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],[DateTimeCreated],
+[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[Start],[End],[OriginalStart],[IsAllDayEvent],
+[LegacyFreeBusyStatus],[Location],[When],[IsMeeting],[IsCancelled],[IsRecurring],[MeetingRequestWasSent],[IsResponseRequested],[CalendarItemType],[MyResponseType],
+[OrganizerName],[OrganizerEmailAddress],[OrganizerRoutingType],[ConflictingMeetingCount],[AdjacentMeetingCount],[Duration],[TimeZone],[AppointmentReplyTime],
+[AppointmentSequenceNumber],[AppointmentState],[Recurrence_Type],[Recurrence_DaysOfWeek],[Recurrence_DayOfWeekIndex],[Recurrence_Month],[Recurrence_DayOfMonth],
+[Recurrence_Interval],[Recurrence_FirstDayOfWeek],[Recurrence_Duration],[Recurrence_StartDate],[Recurrence_EndDate],[Recurrence_NumberOfOccurrences],
+[FirstOccurrence_ItemId],[FirstOccurrence_Start],[FirstOccurrence_End],[FirstOccurrence_OriginalStart],[LastOccurrence_ItemId],[LastOccurrence_Start],
+[LastOccurrence_End],[LastOccurrence_OriginalStart],[ModifiedOccurrences_Aggregate],[DeletedOccurrences_Aggregate],[StartTimeZone_Id],[StartTimeZone_Name],
+[EndTimeZone_Id],[EndTimeZone_Name],[ConferenceType],[AllowNewTimeProposal],[IsOnlineMeeting],[MeetingWorkspaceUrl],[NetShowUrl],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType]
+FROM [Exchange].[Calendar]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Calendar" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Calendar_RequiredAttendees_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [EmailAddress],[ItemId],[Name]
+FROM [Exchange].[Calendar_RequiredAttendees]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Calendar_RequiredAttendees" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Contacts_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[DateTimeReceived],[Size],
+[Categories],[Importance],[IsSubmitted],[InReplyTo],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],[DateTimeCreated],
+[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[EffectiveRights_CreateAssociated],[EffectiveRights_CreateContents],
+[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],[LastModifiedName],
+[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[UniqueBody],[UniqueBodyType],[FileAs],
+[FileAsMapping],[DisplayName],[GivenName],[Initials],[MiddleName],[Nickname],[CompleteName_Title],[CompleteName_FirstName],[CompleteName_MiddleName],[CompleteName_LastName],
+[CompleteName_Suffix],[CompleteName_Initials],[CompleteName_FullName],[CompleteName_Nickname],[CompleteName_YomiFirstName],[CompleteName_YomiLastName],
+[CompanyName],[EmailAddress1],[EmailAddress2],[EmailAddress3],[BusinessAddress_Street],[BusinessAddress_City],[BusinessAddress_State],[BusinessAddress_Country],
+[BusinessAddress_PostalCode],[HomeAddress_Street],[HomeAddress_City],[HomeAddress_State],[HomeAddress_Country],[HomeAddress_PostalCode],[OtherAddress_Street],
+[OtherAddress_City],[OtherAddress_State],[OtherAddress_Country],[OtherAddress_PostalCode],[AssistantPhone],[BusinessFax],[BusinessPhone],[BusinessPhone2],
+[Callback],[CarPhone],[CompanyMainPhone],[HomeFax],[HomePhone],[HomePhone2],[Isdn],[MobilePhone],[OtherFax],[OtherTelephone],[Pager],[PrimaryPhone],[RadioPhone],
+[Telex],[TtyTddPhone],[AssistantName],[Birthday],[BusinessHomePage],[Children_1],[Children_2],[Children_3],[Companies_1],[Companies_2],[Companies_3],[ContactSource],
+[Department],[Generation],[ImAddress1],[ImAddress2],[ImAddress3],[JobTitle],[Manager],[Mileage],[OfficeLocation],[PostalAddressIndex],[Profession],[SpouseName],
+[Surname],[WeddingAnniversary],[HasPicture],[PhoneticFullName],[PhoneticFirstName],[PhoneticLastName],[Alias],[Notes],[Photo],[UserSMIMECertificate],[MSExchangeCertificate],
+[DirectoryId],[ManagerMailbox],[DirectReports]
+FROM [Exchange].[Contacts]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Contacts" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_DeletedItems_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[DeletedItems]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="DeletedItems" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Drafts_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[Drafts]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Drafts" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Folders_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [FolderId],[FolderChangeKey],[ParentFolderId],[ParentFolderChangeKey],[FolderClass],[DisplayName],[TotalCount],[ChildFolderCount],[CanDelete],[CanRenameOrMove],
+[MustDisplayComment],[HasQuota],[IsManagedFoldersRoot],[ManagedFolderId],[Comment],[StorageQuota],[FolderSize],[HomePage],[UnreadCount],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[SharingEffectiveRights]
+FROM [Exchange].[Folders]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Folders" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Inbox_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentId],[AttachmentName],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[Inbox]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Inbox" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_JunkEmail_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[JunkEmail]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="JunkEmail" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Outbox_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[Outbox]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Outbox" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_SentItems_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[SentItems]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="SentItems" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="GetAll_Tasks_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[DateTimeReceived],[Size],
+[Categories],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],[DateTimeCreated],[ReminderDueBy],
+[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[ActualWork],[AssignedTime],[BillingInformation],[ChangeCount],
+[Companies1],[Companies2],[Companies3],[CompleteDate],[Contacts1],[Contacts2],[Contacts3],[DelegationState],[Delegator],[DueDate],[IsAssignmentEditable],
+[IsComplete],[IsRecurring],[IsTeamTask],[Mileage],[Owner],[PercentComplete],[Recurrence_Type],[Recurrence_DaysOfWeek],[Recurrence_DayOfWeekIndex],[Recurrence_Month],
+[Recurrence_DayOfMonth],[Recurrence_Interval],[Recurrence_FirstDayOfWeek],[Recurrence_Duration],[Recurrence_StartDate],[Recurrence_EndDate],[Recurrence_NumberOfOccurrences],
+[StartDate],[Status],[StatusDescription],[TotalWork],[EffectiveRights_CreateAssociated],[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],
+[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],[LastModifiedName],[LastModifiedTime],[IsAssociated],
+[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],[UniqueBody],[UniqueBodyType]
+FROM [Exchange].[Tasks]</sqlscript>
+      <parameters />
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Tasks" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Calendar_OptionalAttendees_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [EmailAddress],[ItemId],[Name]
+FROM [Exchange].[Calendar_OptionalAttendees]
+WHERE [EmailAddress] = @EmailAddress</sqlscript>
+      <parameters>
+        <parameter name="@EmailAddress" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Calendar_OptionalAttendees" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Calendar_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[DateTimeReceived],[Size],
+[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],[DateTimeCreated],
+[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[Start],[End],[OriginalStart],[IsAllDayEvent],
+[LegacyFreeBusyStatus],[Location],[When],[IsMeeting],[IsCancelled],[IsRecurring],[MeetingRequestWasSent],[IsResponseRequested],[CalendarItemType],[MyResponseType],
+[OrganizerName],[OrganizerEmailAddress],[OrganizerRoutingType],[ConflictingMeetingCount],[AdjacentMeetingCount],[Duration],[TimeZone],[AppointmentReplyTime],
+[AppointmentSequenceNumber],[AppointmentState],[Recurrence_Type],[Recurrence_DaysOfWeek],[Recurrence_DayOfWeekIndex],[Recurrence_Month],[Recurrence_DayOfMonth],
+[Recurrence_Interval],[Recurrence_FirstDayOfWeek],[Recurrence_Duration],[Recurrence_StartDate],[Recurrence_EndDate],[Recurrence_NumberOfOccurrences],
+[FirstOccurrence_ItemId],[FirstOccurrence_Start],[FirstOccurrence_End],[FirstOccurrence_OriginalStart],[LastOccurrence_ItemId],[LastOccurrence_Start],
+[LastOccurrence_End],[LastOccurrence_OriginalStart],[ModifiedOccurrences_Aggregate],[DeletedOccurrences_Aggregate],[StartTimeZone_Id],[StartTimeZone_Name],
+[EndTimeZone_Id],[EndTimeZone_Name],[ConferenceType],[AllowNewTimeProposal],[IsOnlineMeeting],[MeetingWorkspaceUrl],[NetShowUrl],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType]
+FROM [Exchange].[Calendar]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Calendar" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Calendar_RequiredAttendees_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [EmailAddress],[ItemId],[Name]
+FROM [Exchange].[Calendar_RequiredAttendees]
+WHERE [EmailAddress] = @EmailAddress</sqlscript>
+      <parameters>
+        <parameter name="@EmailAddress" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Calendar_RequiredAttendees" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Contacts_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[DateTimeReceived],[Size],
+[Categories],[Importance],[IsSubmitted],[InReplyTo],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],[DateTimeCreated],
+[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[EffectiveRights_CreateAssociated],[EffectiveRights_CreateContents],
+[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],[LastModifiedName],
+[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[UniqueBody],[UniqueBodyType],[FileAs],
+[FileAsMapping],[DisplayName],[GivenName],[Initials],[MiddleName],[Nickname],[CompleteName_Title],[CompleteName_FirstName],[CompleteName_MiddleName],[CompleteName_LastName],
+[CompleteName_Suffix],[CompleteName_Initials],[CompleteName_FullName],[CompleteName_Nickname],[CompleteName_YomiFirstName],[CompleteName_YomiLastName],
+[CompanyName],[EmailAddress1],[EmailAddress2],[EmailAddress3],[BusinessAddress_Street],[BusinessAddress_City],[BusinessAddress_State],[BusinessAddress_Country],
+[BusinessAddress_PostalCode],[HomeAddress_Street],[HomeAddress_City],[HomeAddress_State],[HomeAddress_Country],[HomeAddress_PostalCode],[OtherAddress_Street],
+[OtherAddress_City],[OtherAddress_State],[OtherAddress_Country],[OtherAddress_PostalCode],[AssistantPhone],[BusinessFax],[BusinessPhone],[BusinessPhone2],
+[Callback],[CarPhone],[CompanyMainPhone],[HomeFax],[HomePhone],[HomePhone2],[Isdn],[MobilePhone],[OtherFax],[OtherTelephone],[Pager],[PrimaryPhone],[RadioPhone],
+[Telex],[TtyTddPhone],[AssistantName],[Birthday],[BusinessHomePage],[Children_1],[Children_2],[Children_3],[Companies_1],[Companies_2],[Companies_3],[ContactSource],
+[Department],[Generation],[ImAddress1],[ImAddress2],[ImAddress3],[JobTitle],[Manager],[Mileage],[OfficeLocation],[PostalAddressIndex],[Profession],[SpouseName],
+[Surname],[WeddingAnniversary],[HasPicture],[PhoneticFullName],[PhoneticFirstName],[PhoneticLastName],[Alias],[Notes],[Photo],[UserSMIMECertificate],[MSExchangeCertificate],
+[DirectoryId],[ManagerMailbox],[DirectReports]
+FROM [Exchange].[Contacts]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Contacts" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_DeletedItems_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[DeletedItems]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="DeletedItems" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Drafts_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[Drafts]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Drafts" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Folders_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [FolderId],[FolderChangeKey],[ParentFolderId],[ParentFolderChangeKey],[FolderClass],[DisplayName],[TotalCount],[ChildFolderCount],[CanDelete],[CanRenameOrMove],
+[MustDisplayComment],[HasQuota],[IsManagedFoldersRoot],[ManagedFolderId],[Comment],[StorageQuota],[FolderSize],[HomePage],[UnreadCount],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[SharingEffectiveRights]
+FROM [Exchange].[Folders]
+WHERE [FolderId] = @FolderId</sqlscript>
+      <parameters>
+        <parameter name="@FolderId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Folders" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Inbox_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentId],[AttachmentName],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[Inbox]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Inbox" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_JunkEmail_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[JunkEmail]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="JunkEmail" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Outbox_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[Outbox]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Outbox" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_SentItems_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[AttachmentIds],[AttachmentNames],
+[DateTimeReceived],[Size],[Categories],[Importance],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],
+[DateTimeCreated],[ReminderDueBy],[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[SenderName],[SenderEmailAddress],
+[SenderRoutingType],[ToRecipients_Name],[ToRecipients_EmailAddress],[ToRecipients_ItemId],[CcRecipients_Name],[CcRecipients_EmailAddress],[CcRecipients_ItemId],
+[BccRecipients_Name],[BccRecipients_EmailAddress],[BccRecipients_ItemId],[IsReadReceiptRequested],[IsDeliveryReceiptRequested],[ConversationIndex],
+[ConversationTopic],[FromName],[FromEmailAddress],[FromRoutingType],[InternetMessageId],[IsRead],[IsResponseRequested],[References],[EffectiveRights_CreateAssociated],
+[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],
+[ReceivedByName],[ReceivedByEmailAddress],[ReceivedByRoutingType],[ReceivedRepresentingName],[ReceivedRepresentingEmailAddress],[ReceivedRepresentingRoutingType],
+[LastModifiedName],[LastModifiedTime],[IsAssociated],[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],
+[UniqueBody],[UniqueBodyType],[ReminderMessageData_Text],[ReminderMessageData_Location],[ReminderMessageData_StartTime],[ReminderMessageData_EndTime],
+[ReminderMessageData_AssociatedCalendarId]
+FROM [Exchange].[SentItems]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="SentItems" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+    <recordsetdefinition classname="PriKey_Tasks_Recordset" enabled="yes" selected="no">
+      <project1>yes</project1>
+      <project2>yes</project2>
+      <project3>yes</project3>
+      <project4>yes</project4>
+      <project5>yes</project5>
+      <project6>yes</project6>
+      <outputfolder>VenturaAutoCreate</outputfolder>
+      <classsummary>Recordset item automatically created by Ventura SQL Studio.</classsummary>
+      <implementdatabinding>yes</implementdatabinding>
+      <rowloadincremental>no</rowloadincremental>
+      <sqlscript>SELECT [ItemId],[MimeContent],[ItemChangeKey],[ParentFolderId],[ParentFolderChangeKey],[ItemClass],[Subject],[Sensitivity],[Body],[DateTimeReceived],[Size],
+[Categories],[InReplyTo],[IsSubmitted],[IsDraft],[IsFromMe],[IsResend],[IsUnmodified],[InternetMessageHeaders],[DateTimeSent],[DateTimeCreated],[ReminderDueBy],
+[ReminderIsSet],[ReminderMinutesBeforeStart],[DisplayCc],[DisplayTo],[HasAttachments],[Culture],[ActualWork],[AssignedTime],[BillingInformation],[ChangeCount],
+[Companies1],[Companies2],[Companies3],[CompleteDate],[Contacts1],[Contacts2],[Contacts3],[DelegationState],[Delegator],[DueDate],[IsAssignmentEditable],
+[IsComplete],[IsRecurring],[IsTeamTask],[Mileage],[Owner],[PercentComplete],[Recurrence_Type],[Recurrence_DaysOfWeek],[Recurrence_DayOfWeekIndex],[Recurrence_Month],
+[Recurrence_DayOfMonth],[Recurrence_Interval],[Recurrence_FirstDayOfWeek],[Recurrence_Duration],[Recurrence_StartDate],[Recurrence_EndDate],[Recurrence_NumberOfOccurrences],
+[StartDate],[Status],[StatusDescription],[TotalWork],[EffectiveRights_CreateAssociated],[EffectiveRights_CreateContents],[EffectiveRights_CreateHierarchy],
+[EffectiveRights_Delete],[EffectiveRights_Modify],[EffectiveRights_Read],[EffectiveRights_ViewPrivateItems],[LastModifiedName],[LastModifiedTime],[IsAssociated],
+[WebClientReadFormQueryString],[WebClientEditFormQueryString],[ConversationId],[ConversationChangeKey],[UniqueBody],[UniqueBodyType]
+FROM [Exchange].[Tasks]
+WHERE [ItemId] = @ItemId</sqlscript>
+      <parameters>
+        <parameter name="@ItemId" fulltypename="System.String" input="yes" output="no" designvalue="null" setdbtype="no" setlength="no" setprecision="no" setscale="no" dbtypestring="DbType.String" length="0" precision="0" scale="0" />
+      </parameters>
+      <resultsets>
+        <resultset name="Resultset1" enabled="yes">
+          <updateabletablename server="" catalog="CData" schema="Exchange" table="Tasks" />
+        </resultset>
+      </resultsets>
+      <userdefinedcolumns />
+    </recordsetdefinition>
+  </projectitems>
+</project>

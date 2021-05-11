@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfClient.CustomerListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClient"
+        mc:Ignorable="d"
+        Title="CustomerListWindow" Height="600" Width="900">
+    <DockPanel Name="mainPanel">
+        <StackPanel Height="24"  Margin="5" DockPanel.Dock="Bottom" Orientation="Horizontal">
+            <Button Name="buttonLoad" Width="100" Click="buttonLoad_Click">Load</Button>
+            <Button Margin="10,0,0,0" Name="buttonClose" Width="60" Click="buttonClose_Click">Close</Button>
+        </StackPanel>
+        <ListBox Name="listBox"></ListBox>
+        <DataGrid AutoGenerateColumns="true" IsReadOnly="true" SelectionMode="Single" Name="dataGrid"/>
+    </DockPanel>
+</Window>

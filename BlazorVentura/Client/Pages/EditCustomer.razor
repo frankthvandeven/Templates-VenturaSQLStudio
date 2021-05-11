@@ -1,0 +1,115 @@
+﻿@page "/EditCustomer/{CustomerID:long}"
+@page "/NewCustomer"
+@inject NavigationManager NavigationManager
+
+@if (Mode == PageMode.Loading)
+{
+    <p>Loading...</p>
+    return;
+}
+
+@if (Mode == PageMode.Edit)
+{
+    <h1>Edit Customer @CustomerID</h1>
+}
+else
+{
+    <h1>New Customer</h1>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        @if (Thumbnail != null)
+        {
+            <div class="form-group">
+                <img src="data:image;base64,@System.Convert.ToBase64String(Thumbnail)" width="80" height="80" />
+            </div>
+        }
+        <div class="form-group">
+            <label for="FirstName" class="control-label">First name</label>
+            <input for="FirstName" class="form-control" @bind="@FirstName" />
+        </div>
+        <div class="form-group">
+            <label for="LastName" class="control-label">Last name</label>
+            <input for="LastName" class="form-control" @bind="@LastName" />
+        </div>
+        <div class="form-group">
+            <label for="City" class="control-label">City</label>
+            <input for="City" class="form-control" @bind="@City" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" @onclick="ButtonSave">Save</button>
+            <button class="btn btn-primary" @onclick="ButtonCancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private PriKey_Customers_Recordset rs = new PriKey_Customers_Recordset();
+
+    [Parameter]
+    public long CustomerID { get; set; } = 0;
+
+    private PageMode Mode { get; set; } = PageMode.Loading;
+    private byte[] Thumbnail { get; set; } = null;
+    private string FirstName { get; set; }
+    private string LastName { get; set; }
+    private string City { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (CustomerID == 0)
+        {
+            Mode = PageMode.New;
+            Thumbnail = null;
+            FirstName = "";
+            LastName = "";
+            City = "";
+            return;
+        }
+
+        await rs.ExecSqlAsync(CustomerID);
+
+        if (rs.CurrentRecord != null)
+        {
+            Mode = PageMode.Edit;
+            Thumbnail = rs.Thumbnail;
+            FirstName = rs.FirstName;
+            LastName = rs.LastName;
+            City = rs.City;
+        }
+
+    }
+
+    private async Task ButtonSave()
+    {
+        try
+        {
+
+            if (Mode == PageMode.New)
+                rs.Append();
+
+            rs.FirstName = FirstName;
+            rs.LastName = LastName;
+            rs.City = City;
+
+            await rs.SaveChangesAsync();
+
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Exception " + ex.Message);
+
+        }
+
+        NavigationManager.NavigateTo("/");
+
+    }
+
+    private void ButtonCancel()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+}

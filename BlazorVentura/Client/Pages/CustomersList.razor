@@ -1,0 +1,61 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<h1>Customers</h1>
+
+@if (rs == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>First name</th>
+                <th>Last name </th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var record in rs)
+            {
+                <tr>
+                    <td><img src="data:image;base64,@System.Convert.ToBase64String(record.Thumbnail)" width="40" height="40" /></td>
+                    <td>@record.FirstName</td>
+                    <td>@record.LastName</td>
+                    <td>@record.City</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="( e => ButtonEditClick(record.CustomerID))">Edit</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+
+@code {
+
+    GetAll_Customers_Recordset rs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        rs = new GetAll_Customers_Recordset();
+
+        //rs.MaxRows = 40;
+
+        await Transactional.ExecSqlAsync(rs);
+
+    }
+
+    private void ButtonEditClick(long customer_id)
+    {
+        NavigationManager.NavigateTo($"/EditCustomer/{customer_id}");
+    }
+
+}
+

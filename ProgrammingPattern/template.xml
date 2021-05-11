@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template index="b">
+  <title>Learn the programming pattern for LOB (Line of Business) applications (.NET 5)</title>
+  <description>
+    A LOB application is a computer program designed to help a business run.
+    The template installs a WPF client project connecting directly to the "Van Arsdel" SQLite database.
+    The app contains dialogs for selecting orders, and selecting and adding county codes.
+    An in-depth demonstration of using viewmodels and recordsets for rapidly developing LOB software.
+  </description>
+</template>

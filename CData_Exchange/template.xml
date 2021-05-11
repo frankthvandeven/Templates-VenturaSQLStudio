@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template index="e">
+  <title>CData ADO.NET Provider for Microsoft Exchange Server (.NET Framework 4.7)</title>
+  <description>
+    A WPF app connecting to (Office 365) Exchange Server with CData Software's ADO.NET Provider.
+    Switching to a 3-tier architecture only requires changing the ADO connector to the HTTP connector.
+  </description>
+</template>

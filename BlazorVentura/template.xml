@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template index="a">
+  <title>Create a Blazor WebAssembly project with an ASP.NET Core Web API middle-tier (.NET 5)</title>
+  <description>
+    Blazor is a .NET web framework that allows C# code to run cross-platform in the browser.
+    The template installs a Blazor WebAssembly client project and an ASP.NET Core server project.
+    At runtime a browser automatically downloads the client from the webserver and runs it locally.
+    The server's role is both Web server and Web API middle-tier for data access.
+    The server connects to a SQLite database for which sample recordsets have been generated.
+  </description>
+</template>

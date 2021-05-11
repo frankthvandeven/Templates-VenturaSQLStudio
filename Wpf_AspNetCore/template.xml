@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template index="c">
+  <title>Create a WPF client with an ASP.NET Core Web API middle-tier (.NET 5)</title>
+  <description>
+    A WPF Client and an ASP.NET Core Web API project with sample recordsets as the starting point
+    for your project. They connect to a sample Azure SQL database hosted in the Amsterdam data center.
+    The database is hosted on a sysdev.nl Azure account and has reading rights only.
+  </description>
+</template>

@@ -4,7 +4,7 @@ When you [Download](https://dotnet.sysdev.nl/venturasql) and run the VenturaSQL 
 are automatically installed.
 
 But when you download and run the source code from the [VenturaSQL GitHub repository](https://github.com/frankthvandeven/VenturaSQL),
-the templates dropdown-list in "New Project" window will display a message, saying that templates are not available. 
+the templates dropdown-list in "New Project" window in VenturaSQL Studio will display a message, saying that templates are not available. 
 It also displays the name of the expected folder location:
 
 ![Image of New Project window](https://raw.githubusercontent.com/frankthvandeven/Templates-VenturaSQLStudio/master/README_IMG1.png)

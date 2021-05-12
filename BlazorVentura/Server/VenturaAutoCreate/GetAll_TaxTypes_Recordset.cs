@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\BlazorVentura\BlazorVentura.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.126
-	Generated on: Tuesday, 11 May 2021 at 12:03:58
+	Generator version: 4.0.128
+	Generated on: Wednesday, 12 May 2021 at 18:50:10
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -32,7 +32,7 @@ namespace BlazorVentura.Server.VenturaAutoCreate
 			_resultsets = new IResultsetBase[] { this };
 
 			_sqlscript = @"SELECT [TaxTypeID],[Name],[Rate]" + CRLF +
-			             @"FROM [TaxTypes]";
+			             @"FROM [TaxTypes] LIMIT @RowLimit";
 
 			ColumnArrayBuilder schema_array = new ColumnArrayBuilder();
 
@@ -140,12 +140,12 @@ namespace BlazorVentura.Server.VenturaAutoCreate
 
 		byte[] IRecordsetBase.Hash
 		{
-			get { return new byte[] { 118, 94, 107, 137, 93, 158, 27, 232, 78, 142, 246, 104, 105, 100, 3, 254 }; }
+			get { return new byte[] { 76, 39, 183, 119, 127, 1, 227, 181, 18, 16, 112, 30, 175, 142, 186, 120 }; }
 		}
 
 		string IRecordsetBase.HashString
 		{
-			get { return "765E6B895D9E1BE84E8EF668696403FE"; }
+			get { return "4C27B7777F01E3B51210701EAF8EBA78"; }
 		}
 
 		VenturaSqlPlatform IRecordsetBase.GeneratorTarget
@@ -155,12 +155,12 @@ namespace BlazorVentura.Server.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,126); }
+			get { return new Version(4,0,128); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 11, 12, 3, 58); } // Tuesday, 11 May 2021 at 12:03:58
+			get { return new DateTime(2021, 5, 12, 18, 50, 10); } // Wednesday, 12 May 2021 at 18:50:10
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

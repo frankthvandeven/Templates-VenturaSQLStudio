@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\Wpf_AspNetCore\Template.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.126
-	Generated on: Tuesday, 11 May 2021 at 12:04:37
+	Generator version: 4.0.128
+	Generated on: Wednesday, 12 May 2021 at 18:50:56
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -32,7 +32,7 @@ namespace AspNetCoreServer.VenturaAutoCreate
 		{
 			_resultsets = new IResultsetBase[] { this };
 
-			_sqlscript = @"SELECT [WorkOrderID],[ProductID],[OrderQty],[StockedQty],[ScrappedQty],[StartDate],[EndDate],[DueDate],[ScrapReasonID],[ModifiedDate]" + CRLF +
+			_sqlscript = @"SELECT TOP(@RowLimit) [WorkOrderID],[ProductID],[OrderQty],[StockedQty],[ScrappedQty],[StartDate],[EndDate],[DueDate],[ScrapReasonID],[ModifiedDate]" + CRLF +
 			             @"FROM [Production].[WorkOrder]";
 
 			ColumnArrayBuilder schema_array = new ColumnArrayBuilder();
@@ -288,12 +288,12 @@ namespace AspNetCoreServer.VenturaAutoCreate
 
 		byte[] IRecordsetBase.Hash
 		{
-			get { return new byte[] { 125, 115, 156, 248, 134, 30, 215, 142, 169, 73, 95, 159, 67, 233, 13, 145 }; }
+			get { return new byte[] { 105, 237, 54, 159, 9, 66, 202, 234, 124, 252, 31, 94, 63, 181, 147, 229 }; }
 		}
 
 		string IRecordsetBase.HashString
 		{
-			get { return "7D739CF8861ED78EA9495F9F43E90D91"; }
+			get { return "69ED369F0942CAEA7CFC1F5E3FB593E5"; }
 		}
 
 		VenturaSqlPlatform IRecordsetBase.GeneratorTarget
@@ -303,12 +303,12 @@ namespace AspNetCoreServer.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,126); }
+			get { return new Version(4,0,128); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 11, 12, 4, 37); } // Tuesday, 11 May 2021 at 12:04:37
+			get { return new DateTime(2021, 5, 12, 18, 50, 56); } // Wednesday, 12 May 2021 at 18:50:56
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

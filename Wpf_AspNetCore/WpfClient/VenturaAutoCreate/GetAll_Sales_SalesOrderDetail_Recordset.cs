@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\Wpf_AspNetCore\Template.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.126
-	Generated on: Tuesday, 11 May 2021 at 12:04:37
+	Generator version: 4.0.128
+	Generated on: Wednesday, 12 May 2021 at 18:50:56
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -32,8 +32,8 @@ namespace WpfClient.VenturaAutoCreate
 		{
 			_resultsets = new IResultsetBase[] { this };
 
-			_sqlscript = @"SELECT [SalesOrderID],[SalesOrderDetailID],[CarrierTrackingNumber],[OrderQty],[ProductID],[SpecialOfferID],[UnitPrice],[UnitPriceDiscount],[LineTotal]," + CRLF +
-			             @"[rowguid],[ModifiedDate]" + CRLF +
+			_sqlscript = @"SELECT TOP(@RowLimit) [SalesOrderID],[SalesOrderDetailID],[CarrierTrackingNumber],[OrderQty],[ProductID],[SpecialOfferID],[UnitPrice],[UnitPriceDiscount]," + CRLF +
+			             @"[LineTotal],[rowguid],[ModifiedDate]" + CRLF +
 			             @"FROM [Sales].[SalesOrderDetail]";
 
 			ColumnArrayBuilder schema_array = new ColumnArrayBuilder();
@@ -306,12 +306,12 @@ namespace WpfClient.VenturaAutoCreate
 
 		byte[] IRecordsetBase.Hash
 		{
-			get { return new byte[] { 66, 173, 232, 195, 171, 52, 57, 134, 0, 153, 45, 234, 32, 234, 91, 209 }; }
+			get { return new byte[] { 167, 36, 68, 109, 14, 213, 248, 110, 161, 68, 198, 107, 151, 194, 115, 142 }; }
 		}
 
 		string IRecordsetBase.HashString
 		{
-			get { return "42ADE8C3AB34398600992DEA20EA5BD1"; }
+			get { return "A724446D0ED5F86EA144C66B97C2738E"; }
 		}
 
 		VenturaSqlPlatform IRecordsetBase.GeneratorTarget
@@ -321,12 +321,12 @@ namespace WpfClient.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,126); }
+			get { return new Version(4,0,128); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 11, 12, 4, 37); } // Tuesday, 11 May 2021 at 12:04:37
+			get { return new DateTime(2021, 5, 12, 18, 50, 56); } // Wednesday, 12 May 2021 at 18:50:56
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

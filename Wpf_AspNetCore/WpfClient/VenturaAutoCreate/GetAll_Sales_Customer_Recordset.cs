@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\Wpf_AspNetCore\Template.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.126
-	Generated on: Tuesday, 11 May 2021 at 12:04:37
+	Generator version: 4.0.128
+	Generated on: Wednesday, 12 May 2021 at 18:50:56
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -32,7 +32,7 @@ namespace WpfClient.VenturaAutoCreate
 		{
 			_resultsets = new IResultsetBase[] { this };
 
-			_sqlscript = @"SELECT [CustomerID],[PersonID],[StoreID],[TerritoryID],[AccountNumber],[rowguid],[ModifiedDate]" + CRLF +
+			_sqlscript = @"SELECT TOP(@RowLimit) [CustomerID],[PersonID],[StoreID],[TerritoryID],[AccountNumber],[rowguid],[ModifiedDate]" + CRLF +
 			             @"FROM [Sales].[Customer]";
 
 			ColumnArrayBuilder schema_array = new ColumnArrayBuilder();
@@ -223,12 +223,12 @@ namespace WpfClient.VenturaAutoCreate
 
 		byte[] IRecordsetBase.Hash
 		{
-			get { return new byte[] { 84, 118, 120, 138, 39, 241, 208, 128, 144, 109, 72, 38, 133, 251, 101, 59 }; }
+			get { return new byte[] { 237, 253, 200, 227, 110, 138, 138, 133, 195, 21, 131, 37, 179, 193, 169, 214 }; }
 		}
 
 		string IRecordsetBase.HashString
 		{
-			get { return "5476788A27F1D080906D482685FB653B"; }
+			get { return "EDFDC8E36E8A8A85C3158325B3C1A9D6"; }
 		}
 
 		VenturaSqlPlatform IRecordsetBase.GeneratorTarget
@@ -238,12 +238,12 @@ namespace WpfClient.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,126); }
+			get { return new Version(4,0,128); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 11, 12, 4, 37); } // Tuesday, 11 May 2021 at 12:04:37
+			get { return new DateTime(2021, 5, 12, 18, 50, 56); } // Wednesday, 12 May 2021 at 18:50:56
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

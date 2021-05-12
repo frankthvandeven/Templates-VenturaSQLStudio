@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template index="d">
+  <title>Create a Command-line application with direct ADO.NET connection (.NET 5)</title>
+  <description>
+    A Console application that connects directly to an Azure SQL database.
+    The sample database is hosted in the Amsterdam data center.
+    The database is hosted on a sysdev.nl Azure account and has reading rights only.
+  </description>
+</template>

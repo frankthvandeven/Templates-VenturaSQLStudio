@@ -8,7 +8,7 @@
   
   <ItemGroup>
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
-    <PackageReference Include="VenturaSQL.NETStandard" Version="4.0.126" />
+    <PackageReference Include="VenturaSQL.NETStandard" Version="4.0.128" />
   </ItemGroup>
   
   <ItemGroup>

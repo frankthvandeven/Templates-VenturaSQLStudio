@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
-    <PackageReference Include="VenturaSQL.NETStandard" Version="4.0.126" />
+    <PackageReference Include="VenturaSQL.NETStandard" Version="4.0.128" />
   </ItemGroup>
 
 </Project>

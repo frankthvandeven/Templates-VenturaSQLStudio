@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\Wpf_AspNetCore\Template.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.126
-	Generated on: Tuesday, 11 May 2021 at 12:04:37
+	Generator version: 4.0.128
+	Generated on: Wednesday, 12 May 2021 at 18:50:56
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -32,7 +32,7 @@ namespace AspNetCoreServer.VenturaAutoCreate
 		{
 			_resultsets = new IResultsetBase[] { this };
 
-			_sqlscript = @"SELECT [StateProvinceID],[StateProvinceCode],[CountryRegionCode],[IsOnlyStateProvinceFlag],[Name],[TerritoryID],[rowguid],[ModifiedDate]" + CRLF +
+			_sqlscript = @"SELECT TOP(@RowLimit) [StateProvinceID],[StateProvinceCode],[CountryRegionCode],[IsOnlyStateProvinceFlag],[Name],[TerritoryID],[rowguid],[ModifiedDate]" + CRLF +
 			             @"FROM [Person].[StateProvince]";
 
 			ColumnArrayBuilder schema_array = new ColumnArrayBuilder();
@@ -240,12 +240,12 @@ namespace AspNetCoreServer.VenturaAutoCreate
 
 		byte[] IRecordsetBase.Hash
 		{
-			get { return new byte[] { 111, 109, 230, 43, 113, 42, 50, 55, 48, 215, 249, 219, 71, 39, 159, 145 }; }
+			get { return new byte[] { 239, 71, 33, 55, 84, 178, 121, 255, 63, 57, 41, 96, 93, 43, 102, 1 }; }
 		}
 
 		string IRecordsetBase.HashString
 		{
-			get { return "6F6DE62B712A323730D7F9DB47279F91"; }
+			get { return "EF47213754B279FF3F3929605D2B6601"; }
 		}
 
 		VenturaSqlPlatform IRecordsetBase.GeneratorTarget
@@ -255,12 +255,12 @@ namespace AspNetCoreServer.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,126); }
+			get { return new Version(4,0,128); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 11, 12, 4, 37); } // Tuesday, 11 May 2021 at 12:04:37
+			get { return new DateTime(2021, 5, 12, 18, 50, 56); } // Wednesday, 12 May 2021 at 18:50:56
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

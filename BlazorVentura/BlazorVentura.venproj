@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not edit this document manually, or at least make a backup before doing so.-->
-<project writerversion="4.0.126.0">
+<project writerversion="4.0.128.0">
   <inputdatabase providerinvariantname="System.Data.SQLite" connectstring="Data Source={pf}\Server\Database\VanArsdel.db;FailIfMissing=True;" />
   <providersettings includeservername="no" includecatalogname="no" includeschemaname="yes" columnserver="" columncatalog="" columnschema="" columntable="" columntype="" />
   <outputproject1 enabled="yes" targetplatform="NETStandard" generatedirectadoconnectioncode="yes">.\Server\BlazorVentura.Server.csproj</outputproject1>
@@ -58,7 +58,7 @@ order by OrderDate desc limit 5000
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [CategoryID],[Description],[Name],[Picture],[Thumbnail]
-FROM [Categories]</sqlscript>
+FROM [Categories] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -79,7 +79,7 @@ FROM [Categories]</sqlscript>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [CountryCodeID],[Name]
-FROM [CountryCodes]</sqlscript>
+FROM [CountryCodes] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -102,7 +102,7 @@ FROM [CountryCodes]</sqlscript>
       <sqlscript>SELECT [CustomerID],[AddressLine1],[AddressLine2],[BirthDate],[ChildrenAtHome],[City],[CountryCode],[CreatedOn],[Education],[EmailAddress],[FirstName],[Gender],
 [IsHouseOwner],[LastModifiedOn],[LastName],[MaritalStatus],[MiddleName],[NumberCarsOwned],[Occupation],[Phone],[Picture],[PostalCode],[Region],[SearchTerms],
 [Suffix],[Thumbnail],[Title],[TotalChildren],[YearlyIncome]
-FROM [Customers]</sqlscript>
+FROM [Customers] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -123,7 +123,7 @@ FROM [Customers]</sqlscript>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [Version]
-FROM [DbVersion]</sqlscript>
+FROM [DbVersion] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -144,7 +144,7 @@ FROM [DbVersion]</sqlscript>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [OrderID],[OrderLine],[Discount],[ProductID],[Quantity],[TaxType],[UnitPrice]
-FROM [OrderItems]</sqlscript>
+FROM [OrderItems] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -166,7 +166,7 @@ FROM [OrderItems]</sqlscript>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [OrderID],[CustomerID],[DeliveredDate],[LastModifiedOn],[OrderDate],[PaymentType],[SearchTerms],[ShipAddress],[ShipCity],[ShipCountryCode],[ShipPhone],
 [ShipPostalCode],[ShipRegion],[ShipVia],[ShippedDate],[Status],[TrackingNumber]
-FROM [Orders]</sqlscript>
+FROM [Orders] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -187,7 +187,7 @@ FROM [Orders]</sqlscript>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [Status],[Name]
-FROM [OrderStatus]</sqlscript>
+FROM [OrderStatus] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -208,7 +208,7 @@ FROM [OrderStatus]</sqlscript>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [PaymentTypeID],[Name]
-FROM [PaymentTypes]</sqlscript>
+FROM [PaymentTypes] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -230,7 +230,7 @@ FROM [PaymentTypes]</sqlscript>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [ProductID],[CategoryID],[Color],[CreatedOn],[DealerPrice],[Description],[Discount],[DiscountEndDate],[DiscountStartDate],[LastModifiedOn],[ListPrice],
 [Name],[Picture],[SafetyStockLevel],[SearchTerms],[Size],[StockUnits],[TaxType],[Thumbnail]
-FROM [Products]</sqlscript>
+FROM [Products] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -251,7 +251,7 @@ FROM [Products]</sqlscript>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [ShipperID],[Name],[Phone]
-FROM [Shippers]</sqlscript>
+FROM [Shippers] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">
@@ -272,7 +272,7 @@ FROM [Shippers]</sqlscript>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
       <sqlscript>SELECT [TaxTypeID],[Name],[Rate]
-FROM [TaxTypes]</sqlscript>
+FROM [TaxTypes] LIMIT @RowLimit</sqlscript>
       <parameters />
       <resultsets>
         <resultset name="Resultset1" enabled="yes">

@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\Wpf_AspNetCore\Template.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.126
-	Generated on: Tuesday, 11 May 2021 at 12:04:37
+	Generator version: 4.0.128
+	Generated on: Wednesday, 12 May 2021 at 18:50:56
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -32,7 +32,7 @@ namespace WpfClient.VenturaAutoCreate
 		{
 			_resultsets = new IResultsetBase[] { this };
 
-			_sqlscript = @"SELECT [BusinessEntityID],[AccountNumber],[Name],[CreditRating],[PreferredVendorStatus],[ActiveFlag],[PurchasingWebServiceURL],[ModifiedDate]" + CRLF +
+			_sqlscript = @"SELECT TOP(@RowLimit) [BusinessEntityID],[AccountNumber],[Name],[CreditRating],[PreferredVendorStatus],[ActiveFlag],[PurchasingWebServiceURL],[ModifiedDate]" + CRLF +
 			             @"FROM [Purchasing].[Vendor]";
 
 			ColumnArrayBuilder schema_array = new ColumnArrayBuilder();
@@ -239,12 +239,12 @@ namespace WpfClient.VenturaAutoCreate
 
 		byte[] IRecordsetBase.Hash
 		{
-			get { return new byte[] { 178, 15, 31, 126, 19, 40, 143, 74, 32, 108, 185, 134, 70, 18, 159, 210 }; }
+			get { return new byte[] { 144, 208, 62, 29, 45, 57, 236, 108, 153, 80, 101, 95, 44, 129, 148, 157 }; }
 		}
 
 		string IRecordsetBase.HashString
 		{
-			get { return "B20F1F7E13288F4A206CB98646129FD2"; }
+			get { return "90D03E1D2D39EC6C9950655F2C81949D"; }
 		}
 
 		VenturaSqlPlatform IRecordsetBase.GeneratorTarget
@@ -254,12 +254,12 @@ namespace WpfClient.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,126); }
+			get { return new Version(4,0,128); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 11, 12, 4, 37); } // Tuesday, 11 May 2021 at 12:04:37
+			get { return new DateTime(2021, 5, 12, 18, 50, 56); } // Wednesday, 12 May 2021 at 18:50:56
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

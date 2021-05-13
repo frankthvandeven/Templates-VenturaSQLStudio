@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not edit this document manually, or at least make a backup before doing so.-->
-<project writerversion="4.0.126.0">
+<project writerversion="4.0.128.0">
   <inputdatabase providerinvariantname="System.Data.SqlClient" connectstring="Server=tcp:sysdev-sqlserver-public.database.windows.net,1433;Initial Catalog=AdventureWorks2017;Persist Security Info=False;User ID=reader;Password=easypassword9!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=90;" />
   <providersettings includeservername="no" includecatalogname="no" includeschemaname="yes" columnserver="" columncatalog="" columnschema="" columntable="" columntype="" />
   <outputproject1 enabled="yes" targetplatform="NETStandard" generatedirectadoconnectioncode="yes">.\AspNetCoreServer\AspNetCoreServer.csproj</outputproject1>
@@ -127,7 +127,7 @@ FROM   HumanResources.Employee AS e INNER JOIN
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [DepartmentID],[Name],[GroupName],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [DepartmentID],[Name],[GroupName],[ModifiedDate]
 FROM [HumanResources].[Department]</sqlscript>
       <parameters />
       <resultsets>
@@ -148,8 +148,8 @@ FROM [HumanResources].[Department]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[NationalIDNumber],[LoginID],[OrganizationNode],[OrganizationLevel],[JobTitle],[BirthDate],[MaritalStatus],[Gender],[HireDate],
-[SalariedFlag],[VacationHours],[SickLeaveHours],[CurrentFlag],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[NationalIDNumber],[LoginID],[OrganizationNode],[OrganizationLevel],[JobTitle],[BirthDate],[MaritalStatus],[Gender],
+[HireDate],[SalariedFlag],[VacationHours],[SickLeaveHours],[CurrentFlag],[rowguid],[ModifiedDate]
 FROM [HumanResources].[Employee]</sqlscript>
       <parameters />
       <resultsets>
@@ -170,7 +170,7 @@ FROM [HumanResources].[Employee]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[DepartmentID],[ShiftID],[StartDate],[EndDate],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[DepartmentID],[ShiftID],[StartDate],[EndDate],[ModifiedDate]
 FROM [HumanResources].[EmployeeDepartmentHistory]</sqlscript>
       <parameters />
       <resultsets>
@@ -191,7 +191,7 @@ FROM [HumanResources].[EmployeeDepartmentHistory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[RateChangeDate],[Rate],[PayFrequency],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[RateChangeDate],[Rate],[PayFrequency],[ModifiedDate]
 FROM [HumanResources].[EmployeePayHistory]</sqlscript>
       <parameters />
       <resultsets>
@@ -212,7 +212,7 @@ FROM [HumanResources].[EmployeePayHistory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [JobCandidateID],[BusinessEntityID],[Resume],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [JobCandidateID],[BusinessEntityID],[Resume],[ModifiedDate]
 FROM [HumanResources].[JobCandidate]</sqlscript>
       <parameters />
       <resultsets>
@@ -233,7 +233,7 @@ FROM [HumanResources].[JobCandidate]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ShiftID],[Name],[StartTime],[EndTime],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ShiftID],[Name],[StartTime],[EndTime],[ModifiedDate]
 FROM [HumanResources].[Shift]</sqlscript>
       <parameters />
       <resultsets>
@@ -254,7 +254,7 @@ FROM [HumanResources].[Shift]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [AddressID],[AddressLine1],[AddressLine2],[City],[StateProvinceID],[PostalCode],[SpatialLocation],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [AddressID],[AddressLine1],[AddressLine2],[City],[StateProvinceID],[PostalCode],[SpatialLocation],[rowguid],[ModifiedDate]
 FROM [Person].[Address]</sqlscript>
       <parameters />
       <resultsets>
@@ -275,7 +275,7 @@ FROM [Person].[Address]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [AddressTypeID],[Name],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [AddressTypeID],[Name],[rowguid],[ModifiedDate]
 FROM [Person].[AddressType]</sqlscript>
       <parameters />
       <resultsets>
@@ -296,7 +296,7 @@ FROM [Person].[AddressType]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[rowguid],[ModifiedDate]
 FROM [Person].[BusinessEntity]</sqlscript>
       <parameters />
       <resultsets>
@@ -317,7 +317,7 @@ FROM [Person].[BusinessEntity]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[AddressID],[AddressTypeID],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[AddressID],[AddressTypeID],[rowguid],[ModifiedDate]
 FROM [Person].[BusinessEntityAddress]</sqlscript>
       <parameters />
       <resultsets>
@@ -338,7 +338,7 @@ FROM [Person].[BusinessEntityAddress]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[PersonID],[ContactTypeID],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[PersonID],[ContactTypeID],[rowguid],[ModifiedDate]
 FROM [Person].[BusinessEntityContact]</sqlscript>
       <parameters />
       <resultsets>
@@ -359,7 +359,7 @@ FROM [Person].[BusinessEntityContact]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ContactTypeID],[Name],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ContactTypeID],[Name],[ModifiedDate]
 FROM [Person].[ContactType]</sqlscript>
       <parameters />
       <resultsets>
@@ -380,7 +380,7 @@ FROM [Person].[ContactType]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [CountryRegionCode],[Name],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [CountryRegionCode],[Name],[ModifiedDate]
 FROM [Person].[CountryRegion]</sqlscript>
       <parameters />
       <resultsets>
@@ -401,7 +401,7 @@ FROM [Person].[CountryRegion]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[EmailAddressID],[EmailAddress],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[EmailAddressID],[EmailAddress],[rowguid],[ModifiedDate]
 FROM [Person].[EmailAddress]</sqlscript>
       <parameters />
       <resultsets>
@@ -422,7 +422,7 @@ FROM [Person].[EmailAddress]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[PasswordHash],[PasswordSalt],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[PasswordHash],[PasswordSalt],[rowguid],[ModifiedDate]
 FROM [Person].[Password]</sqlscript>
       <parameters />
       <resultsets>
@@ -443,8 +443,8 @@ FROM [Person].[Password]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[PersonType],[NameStyle],[Title],[FirstName],[MiddleName],[LastName],[Suffix],[EmailPromotion],[AdditionalContactInfo],[Demographics],
-[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[PersonType],[NameStyle],[Title],[FirstName],[MiddleName],[LastName],[Suffix],[EmailPromotion],[AdditionalContactInfo],
+[Demographics],[rowguid],[ModifiedDate]
 FROM [Person].[Person]</sqlscript>
       <parameters />
       <resultsets>
@@ -465,7 +465,7 @@ FROM [Person].[Person]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[PhoneNumber],[PhoneNumberTypeID],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[PhoneNumber],[PhoneNumberTypeID],[ModifiedDate]
 FROM [Person].[PersonPhone]</sqlscript>
       <parameters />
       <resultsets>
@@ -486,7 +486,7 @@ FROM [Person].[PersonPhone]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [PhoneNumberTypeID],[Name],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [PhoneNumberTypeID],[Name],[ModifiedDate]
 FROM [Person].[PhoneNumberType]</sqlscript>
       <parameters />
       <resultsets>
@@ -507,7 +507,7 @@ FROM [Person].[PhoneNumberType]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [StateProvinceID],[StateProvinceCode],[CountryRegionCode],[IsOnlyStateProvinceFlag],[Name],[TerritoryID],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [StateProvinceID],[StateProvinceCode],[CountryRegionCode],[IsOnlyStateProvinceFlag],[Name],[TerritoryID],[rowguid],[ModifiedDate]
 FROM [Person].[StateProvince]</sqlscript>
       <parameters />
       <resultsets>
@@ -528,7 +528,7 @@ FROM [Person].[StateProvince]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BillOfMaterialsID],[ProductAssemblyID],[ComponentID],[StartDate],[EndDate],[UnitMeasureCode],[BOMLevel],[PerAssemblyQty],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BillOfMaterialsID],[ProductAssemblyID],[ComponentID],[StartDate],[EndDate],[UnitMeasureCode],[BOMLevel],[PerAssemblyQty],[ModifiedDate]
 FROM [Production].[BillOfMaterials]</sqlscript>
       <parameters />
       <resultsets>
@@ -549,7 +549,7 @@ FROM [Production].[BillOfMaterials]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [CultureID],[Name],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [CultureID],[Name],[ModifiedDate]
 FROM [Production].[Culture]</sqlscript>
       <parameters />
       <resultsets>
@@ -570,8 +570,8 @@ FROM [Production].[Culture]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [DocumentNode],[DocumentLevel],[Title],[Owner],[FolderFlag],[FileName],[FileExtension],[Revision],[ChangeNumber],[Status],[DocumentSummary],[Document],
-[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [DocumentNode],[DocumentLevel],[Title],[Owner],[FolderFlag],[FileName],[FileExtension],[Revision],[ChangeNumber],[Status],[DocumentSummary],
+[Document],[rowguid],[ModifiedDate]
 FROM [Production].[Document]</sqlscript>
       <parameters />
       <resultsets>
@@ -592,7 +592,7 @@ FROM [Production].[Document]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [IllustrationID],[Diagram],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [IllustrationID],[Diagram],[ModifiedDate]
 FROM [Production].[Illustration]</sqlscript>
       <parameters />
       <resultsets>
@@ -613,7 +613,7 @@ FROM [Production].[Illustration]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [LocationID],[Name],[CostRate],[Availability],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [LocationID],[Name],[CostRate],[Availability],[ModifiedDate]
 FROM [Production].[Location]</sqlscript>
       <parameters />
       <resultsets>
@@ -634,9 +634,9 @@ FROM [Production].[Location]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductID],[Name],[ProductNumber],[MakeFlag],[FinishedGoodsFlag],[Color],[SafetyStockLevel],[ReorderPoint],[StandardCost],[ListPrice],[Size],[SizeUnitMeasureCode],
-[WeightUnitMeasureCode],[Weight],[DaysToManufacture],[ProductLine],[Class],[Style],[ProductSubcategoryID],[ProductModelID],[SellStartDate],[SellEndDate],
-[DiscontinuedDate],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductID],[Name],[ProductNumber],[MakeFlag],[FinishedGoodsFlag],[Color],[SafetyStockLevel],[ReorderPoint],[StandardCost],[ListPrice],
+[Size],[SizeUnitMeasureCode],[WeightUnitMeasureCode],[Weight],[DaysToManufacture],[ProductLine],[Class],[Style],[ProductSubcategoryID],[ProductModelID],
+[SellStartDate],[SellEndDate],[DiscontinuedDate],[rowguid],[ModifiedDate]
 FROM [Production].[Product]</sqlscript>
       <parameters />
       <resultsets>
@@ -657,7 +657,7 @@ FROM [Production].[Product]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductCategoryID],[Name],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductCategoryID],[Name],[rowguid],[ModifiedDate]
 FROM [Production].[ProductCategory]</sqlscript>
       <parameters />
       <resultsets>
@@ -678,7 +678,7 @@ FROM [Production].[ProductCategory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductID],[StartDate],[EndDate],[StandardCost],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductID],[StartDate],[EndDate],[StandardCost],[ModifiedDate]
 FROM [Production].[ProductCostHistory]</sqlscript>
       <parameters />
       <resultsets>
@@ -699,7 +699,7 @@ FROM [Production].[ProductCostHistory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductDescriptionID],[Description],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductDescriptionID],[Description],[rowguid],[ModifiedDate]
 FROM [Production].[ProductDescription]</sqlscript>
       <parameters />
       <resultsets>
@@ -720,7 +720,7 @@ FROM [Production].[ProductDescription]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductID],[DocumentNode],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductID],[DocumentNode],[ModifiedDate]
 FROM [Production].[ProductDocument]</sqlscript>
       <parameters />
       <resultsets>
@@ -741,7 +741,7 @@ FROM [Production].[ProductDocument]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductID],[LocationID],[Shelf],[Bin],[Quantity],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductID],[LocationID],[Shelf],[Bin],[Quantity],[rowguid],[ModifiedDate]
 FROM [Production].[ProductInventory]</sqlscript>
       <parameters />
       <resultsets>
@@ -762,7 +762,7 @@ FROM [Production].[ProductInventory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductID],[StartDate],[EndDate],[ListPrice],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductID],[StartDate],[EndDate],[ListPrice],[ModifiedDate]
 FROM [Production].[ProductListPriceHistory]</sqlscript>
       <parameters />
       <resultsets>
@@ -783,7 +783,7 @@ FROM [Production].[ProductListPriceHistory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductModelID],[Name],[CatalogDescription],[Instructions],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductModelID],[Name],[CatalogDescription],[Instructions],[rowguid],[ModifiedDate]
 FROM [Production].[ProductModel]</sqlscript>
       <parameters />
       <resultsets>
@@ -804,7 +804,7 @@ FROM [Production].[ProductModel]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductModelID],[IllustrationID],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductModelID],[IllustrationID],[ModifiedDate]
 FROM [Production].[ProductModelIllustration]</sqlscript>
       <parameters />
       <resultsets>
@@ -825,7 +825,7 @@ FROM [Production].[ProductModelIllustration]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductModelID],[ProductDescriptionID],[CultureID],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductModelID],[ProductDescriptionID],[CultureID],[ModifiedDate]
 FROM [Production].[ProductModelProductDescriptionCulture]</sqlscript>
       <parameters />
       <resultsets>
@@ -846,7 +846,7 @@ FROM [Production].[ProductModelProductDescriptionCulture]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductPhotoID],[ThumbNailPhoto],[ThumbnailPhotoFileName],[LargePhoto],[LargePhotoFileName],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductPhotoID],[ThumbNailPhoto],[ThumbnailPhotoFileName],[LargePhoto],[LargePhotoFileName],[ModifiedDate]
 FROM [Production].[ProductPhoto]</sqlscript>
       <parameters />
       <resultsets>
@@ -867,7 +867,7 @@ FROM [Production].[ProductPhoto]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductID],[ProductPhotoID],[Primary],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductID],[ProductPhotoID],[Primary],[ModifiedDate]
 FROM [Production].[ProductProductPhoto]</sqlscript>
       <parameters />
       <resultsets>
@@ -888,7 +888,7 @@ FROM [Production].[ProductProductPhoto]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductReviewID],[ProductID],[ReviewerName],[ReviewDate],[EmailAddress],[Rating],[Comments],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductReviewID],[ProductID],[ReviewerName],[ReviewDate],[EmailAddress],[Rating],[Comments],[ModifiedDate]
 FROM [Production].[ProductReview]</sqlscript>
       <parameters />
       <resultsets>
@@ -909,7 +909,7 @@ FROM [Production].[ProductReview]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductSubcategoryID],[ProductCategoryID],[Name],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductSubcategoryID],[ProductCategoryID],[Name],[rowguid],[ModifiedDate]
 FROM [Production].[ProductSubcategory]</sqlscript>
       <parameters />
       <resultsets>
@@ -930,7 +930,7 @@ FROM [Production].[ProductSubcategory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ScrapReasonID],[Name],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ScrapReasonID],[Name],[ModifiedDate]
 FROM [Production].[ScrapReason]</sqlscript>
       <parameters />
       <resultsets>
@@ -951,7 +951,8 @@ FROM [Production].[ScrapReason]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [TransactionID],[ProductID],[ReferenceOrderID],[ReferenceOrderLineID],[TransactionDate],[TransactionType],[Quantity],[ActualCost],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [TransactionID],[ProductID],[ReferenceOrderID],[ReferenceOrderLineID],[TransactionDate],[TransactionType],[Quantity],[ActualCost],
+[ModifiedDate]
 FROM [Production].[TransactionHistory]</sqlscript>
       <parameters />
       <resultsets>
@@ -972,7 +973,8 @@ FROM [Production].[TransactionHistory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [TransactionID],[ProductID],[ReferenceOrderID],[ReferenceOrderLineID],[TransactionDate],[TransactionType],[Quantity],[ActualCost],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [TransactionID],[ProductID],[ReferenceOrderID],[ReferenceOrderLineID],[TransactionDate],[TransactionType],[Quantity],[ActualCost],
+[ModifiedDate]
 FROM [Production].[TransactionHistoryArchive]</sqlscript>
       <parameters />
       <resultsets>
@@ -993,7 +995,7 @@ FROM [Production].[TransactionHistoryArchive]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [UnitMeasureCode],[Name],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [UnitMeasureCode],[Name],[ModifiedDate]
 FROM [Production].[UnitMeasure]</sqlscript>
       <parameters />
       <resultsets>
@@ -1014,7 +1016,7 @@ FROM [Production].[UnitMeasure]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [WorkOrderID],[ProductID],[OrderQty],[StockedQty],[ScrappedQty],[StartDate],[EndDate],[DueDate],[ScrapReasonID],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [WorkOrderID],[ProductID],[OrderQty],[StockedQty],[ScrappedQty],[StartDate],[EndDate],[DueDate],[ScrapReasonID],[ModifiedDate]
 FROM [Production].[WorkOrder]</sqlscript>
       <parameters />
       <resultsets>
@@ -1035,8 +1037,8 @@ FROM [Production].[WorkOrder]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [WorkOrderID],[ProductID],[OperationSequence],[LocationID],[ScheduledStartDate],[ScheduledEndDate],[ActualStartDate],[ActualEndDate],[ActualResourceHrs],
-[PlannedCost],[ActualCost],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [WorkOrderID],[ProductID],[OperationSequence],[LocationID],[ScheduledStartDate],[ScheduledEndDate],[ActualStartDate],[ActualEndDate],
+[ActualResourceHrs],[PlannedCost],[ActualCost],[ModifiedDate]
 FROM [Production].[WorkOrderRouting]</sqlscript>
       <parameters />
       <resultsets>
@@ -1057,8 +1059,8 @@ FROM [Production].[WorkOrderRouting]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ProductID],[BusinessEntityID],[AverageLeadTime],[StandardPrice],[LastReceiptCost],[LastReceiptDate],[MinOrderQty],[MaxOrderQty],[OnOrderQty],[UnitMeasureCode],
-[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ProductID],[BusinessEntityID],[AverageLeadTime],[StandardPrice],[LastReceiptCost],[LastReceiptDate],[MinOrderQty],[MaxOrderQty],
+[OnOrderQty],[UnitMeasureCode],[ModifiedDate]
 FROM [Purchasing].[ProductVendor]</sqlscript>
       <parameters />
       <resultsets>
@@ -1079,7 +1081,8 @@ FROM [Purchasing].[ProductVendor]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [PurchaseOrderID],[PurchaseOrderDetailID],[DueDate],[OrderQty],[ProductID],[UnitPrice],[LineTotal],[ReceivedQty],[RejectedQty],[StockedQty],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [PurchaseOrderID],[PurchaseOrderDetailID],[DueDate],[OrderQty],[ProductID],[UnitPrice],[LineTotal],[ReceivedQty],[RejectedQty],[StockedQty],
+[ModifiedDate]
 FROM [Purchasing].[PurchaseOrderDetail]</sqlscript>
       <parameters />
       <resultsets>
@@ -1100,8 +1103,8 @@ FROM [Purchasing].[PurchaseOrderDetail]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [PurchaseOrderID],[RevisionNumber],[Status],[EmployeeID],[VendorID],[ShipMethodID],[OrderDate],[ShipDate],[SubTotal],[TaxAmt],[Freight],[TotalDue],
-[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [PurchaseOrderID],[RevisionNumber],[Status],[EmployeeID],[VendorID],[ShipMethodID],[OrderDate],[ShipDate],[SubTotal],[TaxAmt],[Freight],
+[TotalDue],[ModifiedDate]
 FROM [Purchasing].[PurchaseOrderHeader]</sqlscript>
       <parameters />
       <resultsets>
@@ -1122,7 +1125,7 @@ FROM [Purchasing].[PurchaseOrderHeader]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ShipMethodID],[Name],[ShipBase],[ShipRate],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ShipMethodID],[Name],[ShipBase],[ShipRate],[rowguid],[ModifiedDate]
 FROM [Purchasing].[ShipMethod]</sqlscript>
       <parameters />
       <resultsets>
@@ -1143,7 +1146,7 @@ FROM [Purchasing].[ShipMethod]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[AccountNumber],[Name],[CreditRating],[PreferredVendorStatus],[ActiveFlag],[PurchasingWebServiceURL],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[AccountNumber],[Name],[CreditRating],[PreferredVendorStatus],[ActiveFlag],[PurchasingWebServiceURL],[ModifiedDate]
 FROM [Purchasing].[Vendor]</sqlscript>
       <parameters />
       <resultsets>
@@ -1164,7 +1167,7 @@ FROM [Purchasing].[Vendor]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [CountryRegionCode],[CurrencyCode],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [CountryRegionCode],[CurrencyCode],[ModifiedDate]
 FROM [Sales].[CountryRegionCurrency]</sqlscript>
       <parameters />
       <resultsets>
@@ -1185,7 +1188,7 @@ FROM [Sales].[CountryRegionCurrency]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [CreditCardID],[CardType],[CardNumber],[ExpMonth],[ExpYear],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [CreditCardID],[CardType],[CardNumber],[ExpMonth],[ExpYear],[ModifiedDate]
 FROM [Sales].[CreditCard]</sqlscript>
       <parameters />
       <resultsets>
@@ -1206,7 +1209,7 @@ FROM [Sales].[CreditCard]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [CurrencyCode],[Name],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [CurrencyCode],[Name],[ModifiedDate]
 FROM [Sales].[Currency]</sqlscript>
       <parameters />
       <resultsets>
@@ -1227,7 +1230,7 @@ FROM [Sales].[Currency]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [CurrencyRateID],[CurrencyRateDate],[FromCurrencyCode],[ToCurrencyCode],[AverageRate],[EndOfDayRate],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [CurrencyRateID],[CurrencyRateDate],[FromCurrencyCode],[ToCurrencyCode],[AverageRate],[EndOfDayRate],[ModifiedDate]
 FROM [Sales].[CurrencyRate]</sqlscript>
       <parameters />
       <resultsets>
@@ -1248,7 +1251,7 @@ FROM [Sales].[CurrencyRate]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [CustomerID],[PersonID],[StoreID],[TerritoryID],[AccountNumber],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [CustomerID],[PersonID],[StoreID],[TerritoryID],[AccountNumber],[rowguid],[ModifiedDate]
 FROM [Sales].[Customer]</sqlscript>
       <parameters />
       <resultsets>
@@ -1269,7 +1272,7 @@ FROM [Sales].[Customer]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[CreditCardID],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[CreditCardID],[ModifiedDate]
 FROM [Sales].[PersonCreditCard]</sqlscript>
       <parameters />
       <resultsets>
@@ -1290,8 +1293,8 @@ FROM [Sales].[PersonCreditCard]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [SalesOrderID],[SalesOrderDetailID],[CarrierTrackingNumber],[OrderQty],[ProductID],[SpecialOfferID],[UnitPrice],[UnitPriceDiscount],[LineTotal],
-[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [SalesOrderID],[SalesOrderDetailID],[CarrierTrackingNumber],[OrderQty],[ProductID],[SpecialOfferID],[UnitPrice],[UnitPriceDiscount],
+[LineTotal],[rowguid],[ModifiedDate]
 FROM [Sales].[SalesOrderDetail]</sqlscript>
       <parameters />
       <resultsets>
@@ -1312,9 +1315,9 @@ FROM [Sales].[SalesOrderDetail]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [SalesOrderID],[RevisionNumber],[OrderDate],[DueDate],[ShipDate],[Status],[OnlineOrderFlag],[SalesOrderNumber],[PurchaseOrderNumber],[AccountNumber],
-[CustomerID],[SalesPersonID],[TerritoryID],[BillToAddressID],[ShipToAddressID],[ShipMethodID],[CreditCardID],[CreditCardApprovalCode],[CurrencyRateID],
-[SubTotal],[TaxAmt],[Freight],[TotalDue],[Comment],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [SalesOrderID],[RevisionNumber],[OrderDate],[DueDate],[ShipDate],[Status],[OnlineOrderFlag],[SalesOrderNumber],[PurchaseOrderNumber],
+[AccountNumber],[CustomerID],[SalesPersonID],[TerritoryID],[BillToAddressID],[ShipToAddressID],[ShipMethodID],[CreditCardID],[CreditCardApprovalCode],
+[CurrencyRateID],[SubTotal],[TaxAmt],[Freight],[TotalDue],[Comment],[rowguid],[ModifiedDate]
 FROM [Sales].[SalesOrderHeader]</sqlscript>
       <parameters />
       <resultsets>
@@ -1335,7 +1338,7 @@ FROM [Sales].[SalesOrderHeader]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [SalesOrderID],[SalesReasonID],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [SalesOrderID],[SalesReasonID],[ModifiedDate]
 FROM [Sales].[SalesOrderHeaderSalesReason]</sqlscript>
       <parameters />
       <resultsets>
@@ -1356,7 +1359,7 @@ FROM [Sales].[SalesOrderHeaderSalesReason]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[TerritoryID],[SalesQuota],[Bonus],[CommissionPct],[SalesYTD],[SalesLastYear],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[TerritoryID],[SalesQuota],[Bonus],[CommissionPct],[SalesYTD],[SalesLastYear],[rowguid],[ModifiedDate]
 FROM [Sales].[SalesPerson]</sqlscript>
       <parameters />
       <resultsets>
@@ -1377,7 +1380,7 @@ FROM [Sales].[SalesPerson]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[QuotaDate],[SalesQuota],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[QuotaDate],[SalesQuota],[rowguid],[ModifiedDate]
 FROM [Sales].[SalesPersonQuotaHistory]</sqlscript>
       <parameters />
       <resultsets>
@@ -1398,7 +1401,7 @@ FROM [Sales].[SalesPersonQuotaHistory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [SalesReasonID],[Name],[ReasonType],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [SalesReasonID],[Name],[ReasonType],[ModifiedDate]
 FROM [Sales].[SalesReason]</sqlscript>
       <parameters />
       <resultsets>
@@ -1419,7 +1422,7 @@ FROM [Sales].[SalesReason]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [SalesTaxRateID],[StateProvinceID],[TaxType],[TaxRate],[Name],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [SalesTaxRateID],[StateProvinceID],[TaxType],[TaxRate],[Name],[rowguid],[ModifiedDate]
 FROM [Sales].[SalesTaxRate]</sqlscript>
       <parameters />
       <resultsets>
@@ -1440,7 +1443,7 @@ FROM [Sales].[SalesTaxRate]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [TerritoryID],[Name],[CountryRegionCode],[Group],[SalesYTD],[SalesLastYear],[CostYTD],[CostLastYear],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [TerritoryID],[Name],[CountryRegionCode],[Group],[SalesYTD],[SalesLastYear],[CostYTD],[CostLastYear],[rowguid],[ModifiedDate]
 FROM [Sales].[SalesTerritory]</sqlscript>
       <parameters />
       <resultsets>
@@ -1461,7 +1464,7 @@ FROM [Sales].[SalesTerritory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[TerritoryID],[StartDate],[EndDate],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[TerritoryID],[StartDate],[EndDate],[rowguid],[ModifiedDate]
 FROM [Sales].[SalesTerritoryHistory]</sqlscript>
       <parameters />
       <resultsets>
@@ -1482,7 +1485,7 @@ FROM [Sales].[SalesTerritoryHistory]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [ShoppingCartItemID],[ShoppingCartID],[Quantity],[ProductID],[DateCreated],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [ShoppingCartItemID],[ShoppingCartID],[Quantity],[ProductID],[DateCreated],[ModifiedDate]
 FROM [Sales].[ShoppingCartItem]</sqlscript>
       <parameters />
       <resultsets>
@@ -1503,7 +1506,7 @@ FROM [Sales].[ShoppingCartItem]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [SpecialOfferID],[Description],[DiscountPct],[Type],[Category],[StartDate],[EndDate],[MinQty],[MaxQty],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [SpecialOfferID],[Description],[DiscountPct],[Type],[Category],[StartDate],[EndDate],[MinQty],[MaxQty],[rowguid],[ModifiedDate]
 FROM [Sales].[SpecialOffer]</sqlscript>
       <parameters />
       <resultsets>
@@ -1524,7 +1527,7 @@ FROM [Sales].[SpecialOffer]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [SpecialOfferID],[ProductID],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [SpecialOfferID],[ProductID],[rowguid],[ModifiedDate]
 FROM [Sales].[SpecialOfferProduct]</sqlscript>
       <parameters />
       <resultsets>
@@ -1545,7 +1548,7 @@ FROM [Sales].[SpecialOfferProduct]</sqlscript>
       <classsummary>Recordset item automatically created by VenturaSQL Studio.</classsummary>
       <implementdatabinding>yes</implementdatabinding>
       <rowloadincremental>no</rowloadincremental>
-      <sqlscript>SELECT [BusinessEntityID],[Name],[SalesPersonID],[Demographics],[rowguid],[ModifiedDate]
+      <sqlscript>SELECT TOP(@RowLimit) [BusinessEntityID],[Name],[SalesPersonID],[Demographics],[rowguid],[ModifiedDate]
 FROM [Sales].[Store]</sqlscript>
       <parameters />
       <resultsets>

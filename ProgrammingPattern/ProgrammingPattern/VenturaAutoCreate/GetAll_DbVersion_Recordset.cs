@@ -2,7 +2,7 @@
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\ProgrammingPattern\ProgrammingPattern.venproj"
 	Target platform: NETStandard
 	Generator version: 4.0.128
-	Generated on: Wednesday, 12 May 2021 at 18:50:44
+	Generated on: Thursday, 13 May 2021 at 08:02:35
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -121,7 +121,7 @@ namespace ProgrammingPattern.VenturaAutoCreate
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 12, 18, 50, 44); } // Wednesday, 12 May 2021 at 18:50:44
+			get { return new DateTime(2021, 5, 13, 8, 2, 35); } // Thursday, 13 May 2021 at 08:02:35
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

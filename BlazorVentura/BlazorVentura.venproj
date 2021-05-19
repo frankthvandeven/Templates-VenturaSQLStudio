@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not edit this document manually, or at least make a backup before doing so.-->
-<project writerversion="4.0.128.0">
+<project writerversion="4.0.130.0">
   <inputdatabase providerinvariantname="System.Data.SQLite" connectstring="Data Source={pf}\Server\Database\VanArsdel.db;FailIfMissing=True;" />
   <providersettings includeservername="no" includecatalogname="no" includeschemaname="yes" columnserver="" columncatalog="" columnschema="" columntable="" columntype="" />
   <outputproject1 enabled="yes" targetplatform="NETStandard" generatedirectadoconnectioncode="yes">.\Server\BlazorVentura.Server.csproj</outputproject1>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not edit this document manually, or at least make a backup before doing so.-->
-<project writerversion="4.0.128.0">
+<project writerversion="4.0.130.0">
   <inputdatabase providerinvariantname="System.Data.SqlClient" connectstring="Server=tcp:sysdev-sqlserver-public.database.windows.net,1433;Initial Catalog=AdventureWorks2017;Persist Security Info=False;User ID=reader;Password=easypassword9!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=90;" />
   <providersettings includeservername="no" includecatalogname="no" includeschemaname="yes" columnserver="" columncatalog="" columnschema="" columntable="" columntype="" />
   <outputproject1 enabled="yes" targetplatform="NETStandard" generatedirectadoconnectioncode="yes">.\AspNetCoreServer\AspNetCoreServer.csproj</outputproject1>

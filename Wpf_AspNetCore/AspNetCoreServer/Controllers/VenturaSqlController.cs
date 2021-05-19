@@ -13,20 +13,16 @@ namespace AspNetCoreServer.Controllers
     {
         [Route("api/venturasql")]
         [HttpPost]
-        public async Task<IActionResult> Index(byte[] requestData)
+        public Task Index(byte[] requestData)
         {
-
             var processor = new VenturaSqlServerEngine();
 
+            processor.RequestData = requestData;
             processor.CallBacks.LookupAdoConnector = LookupAdoConnector;
 
-            await processor.ExecAsync(requestData);
+            processor.Exec();
 
-            Response.ContentType = "application/octet-stream";
-
-            await Response.Body.WriteAsync(processor.ResponseBuffer, 0, processor.ResponseLength);
-
-            return Ok();
+            return Response.Body.WriteAsync(processor.ResponseBuffer, 0, processor.ResponseLength);
         }
 
         private AdoConnector LookupAdoConnector(string requestedName)

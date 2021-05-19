@@ -29,7 +29,7 @@ namespace ConsoleApp
                 Console.WriteLine("Response received.");
 
                 foreach (var record in rs)
-                    Console.WriteLine($" {record.FirstName} Hello World!");
+                    Console.WriteLine($" {record.FirstName} {rs.LastName}");
 
                 Console.WriteLine();
                 Console.WriteLine("Press Q to quit.");

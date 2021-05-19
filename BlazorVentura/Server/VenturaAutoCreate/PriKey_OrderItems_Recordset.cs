@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\BlazorVentura\BlazorVentura.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.128
-	Generated on: Thursday, 13 May 2021 at 09:31:58
+	Generator version: 4.0.130
+	Generated on: Wednesday, 19 May 2021 at 09:11:42
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -251,12 +251,12 @@ namespace BlazorVentura.Server.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,128); }
+			get { return new Version(4,0,130); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 13, 9, 31, 58); } // Thursday, 13 May 2021 at 09:31:58
+			get { return new DateTime(2021, 5, 19, 9, 11, 42); } // Wednesday, 19 May 2021 at 09:11:42
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName

@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
-    <PackageReference Include="VenturaSQL.AspNetCore.Server" Version="4.0.128" />
+    <PackageReference Include="VenturaSQL.AspNetCore.Server" Version="4.0.130" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 

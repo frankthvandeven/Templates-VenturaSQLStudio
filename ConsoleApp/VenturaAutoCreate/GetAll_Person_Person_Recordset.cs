@@ -1,8 +1,8 @@
 /*
 	Project file: "C:\Active\VenturaSQL\BuildSystem\Templates\ConsoleApp\Template.venproj"
 	Target platform: NETStandard
-	Generator version: 4.0.128
-	Generated on: Wednesday, 12 May 2021 at 18:50:24
+	Generator version: 4.0.130
+	Generated on: Wednesday, 19 May 2021 at 09:11:58
 	At the bottom of this file you find a template for extending Recordsets with calculated columns for XAML data binding.
 */
 using VenturaSQL;
@@ -356,12 +356,12 @@ namespace ConsoleApp.VenturaAutoCreate
 
 		Version IRecordsetBase.GeneratorVersion
 		{
-			get { return new Version(4,0,128); }
+			get { return new Version(4,0,130); }
 		}
 
 		DateTime IRecordsetBase.GeneratorTimestamp
 		{
-			get { return new DateTime(2021, 5, 12, 18, 50, 24); } // Wednesday, 12 May 2021 at 18:50:24
+			get { return new DateTime(2021, 5, 19, 9, 11, 58); } // Wednesday, 19 May 2021 at 09:11:58
 		}
 
 		string IRecordsetBase.GeneratorProviderInvariantName
